@@ -1,19 +1,19 @@
 {
   "name": "nocodb",
   "description": {
-    "en": "My nocodb module"
+    "en": "NocoDB allows building no-code database solutions with ease of spreadsheets."
   },
   "categories": [],
   "authors": [
     {
-      "name": "Name Surname",
-      "email": "author@yourmail.org"
+      "name": "Kemboi Elvis",
+      "email": "kemboielvis@genius.ke"
     }
   ],
   "docs": {
-    "documentation_url": "https://docs.nocodb.com/",
-    "bug_url": "https://github.com/NethServer/dev",
-    "code_url": "https://github.com/author/ns8-nocodb"
+    "documentation_url": "https://nocodb.com/",
+    "bug_url": "https://github.com/geniusdynamics/dev",
+    "code_url": "https://github.com/geniusdynamics/ns8-nocodb"
   },
-  "source": "ghcr.io/nethserver/nocodb"
+  "source": "ghcr.io/geniusdynamics/nocodb"
 }
