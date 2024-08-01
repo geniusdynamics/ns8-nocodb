@@ -21,11 +21,9 @@ ExecStartPre=-runagent discover-smarthost
 ExecStart=/usr/bin/podman run --conmon-pidfile %t/nocodb-app.pid \
     --cidfile %t/nocodb-app.ctr-id --cgroups=no-conmon \
     --pod-id-file %t/nocodb.pod-id --replace -d --name  nocodb-app \
-    --volume nocodb-app:/var/www/html/:Z \
-    --volume ./config:/tmp:Z \
-    --env=NGINX_* \
-    --env 'CONFIG_DATABASE_URI="postgresql://postgres:Nethesis,1234@127.0.0.1:5432/nocodb"' \
-    ${NGINX_IMAGE}
+    --volume nocodb-app:/usr/app/data/:Z \
+    --env-file=%S/state/nocodb-db.env \
+    ${NOCODB_IMAGE}
 ExecStop=/usr/bin/podman stop --ignore --cidfile %t/nocodb-app.ctr-id -t 10
 ExecReload=/usr/bin/podman kill -s HUP nocodb-app
 SyslogIdentifier=%u
