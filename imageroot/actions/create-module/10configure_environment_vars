@@ -34,4 +34,11 @@ postgres_config = {
     "POSTGRES_DB": POSTGRES_DB
 }
 agent.write_envfile("database.env", postgres_config)
+# "pg://root_db:5432?u=postgres&p=password&d=root_db"
+PG_CONNECTION_STRING = f"pg://postgresql-app:5432?u={POSTGRES_USER}&p={POSTGRES_PASSWORD}&d={POSTGRES_DB}"
+nocodb_config = {
+    "NC_DB": PG_CONNECTION_STRING
+}
+agent.write_envfile("nocodb-db.env", nocodb_config)
+
 #agent.dump_env()
