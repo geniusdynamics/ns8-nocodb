@@ -14,7 +14,7 @@ images=()
 repobase="${REPOBASE:-ghcr.io/geniusdynamics}"
 # Configure the image name
 reponame="nocodb"
-APP_VERSION="0.264.6"
+APP_VERSION="0.265.1"
 
 # Create a new empty container image
 container=$(buildah from scratch)
