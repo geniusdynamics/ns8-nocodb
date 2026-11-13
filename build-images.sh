@@ -18,7 +18,7 @@ reponame="nocodb"
 # renovate: datasource=npm packageName=corepack
 corepack_version=0.36.0
 # renovate: datasource=docker packageName=docker.io/nocodb/nocodb
-APP_VERSION=0.264.6
+APP_VERSION=0.265.1
 
 # Create a new empty container image
 container=$(buildah from scratch)
