@@ -1,9 +1,12 @@
 {
   "name": "nocodb",
   "description": {
-    "en": "NocoDB allows building no-code database solutions with ease of spreadsheets."
+    "en": "NocoDB allows building no-code database solutions with ease of spreadsheets.",
+    "it": "NocoDB permette di creare database senza codice con la semplicità di un foglio di calcolo."
   },
-  "categories": [],
+  "categories": [
+    "database"
+  ],
   "authors": [
     {
       "name": "Kemboi Elvis",
